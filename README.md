@@ -1,2 +1,3 @@
 # website-decor
-Scripts used to get background images for personal website
+
+Scripts used to create background images for personal website https://www.gastonsanchez.com
