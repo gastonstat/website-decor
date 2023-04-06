@@ -17,9 +17,9 @@ dists = c(dist1, dist2, dist3, dist4, dist5)
 min(dists)
 max(dists)
 
-hist(dists, ylim=c(0, 20), col = "#8595E1",  
-     border = "white", main = "", xlab = "", ylab = "", 
-     axes = FALSE) 
+#hist(dists, ylim=c(0, 20), col = "#8595E1",  
+#     border = "white", main = "", xlab = "", ylab = "", 
+#     axes = FALSE) 
 
 
 # categorizing class intervals
@@ -46,8 +46,9 @@ cols = sample(c(oranges, greens, blues), size = n, replace = TRUE)
 
 
 # barchart
-png(file="full-bars.png", width=1500, height=200)
+png(file="full-bars.png", width=1500, height=300)
 op = par(mar = c(0.5, 0, 0, 0))
-barplot(table(y), border = NA, axes = FALSE, names.arg = "", col = cols)
+barplot(table(y), border = NA, axes = FALSE, names.arg = "", col = cols,
+        xlim = c(1.5,46.5), ylim = c(0,30))
 par(op)
 dev.off()
