@@ -39,14 +39,15 @@ blues = hsv(h = bv, s = 1, v = 0.8, alpha = runif(50, 0.7, 0.9))
 gv = runif(100, 0.20, 0.25)
 greens = hsv(h = gv, s = 1, v = 1, alpha = runif(50, 0.7, 0.9))
 
-ov = runif(100, 0.08, 0.13)
+#ov = runif(100, 0.08, 0.13)
+ov = runif(100, 0.10, 0.10)
 oranges = hsv(h = ov, s = 1, v = 0.95, alpha = runif(50, 0.7, 0.9))
 
 cols = sample(c(oranges, greens, blues), size = n, replace = TRUE)
 
 
-# barchart
-png(file="full-bars.png", width=1500, height=300)
+# barchart (height limited to 200px so that is looks nice in website)
+png(file="full-bars.png", width=1500, height=200)
 op = par(mar = c(0.5, 0, 0, 0))
 barplot(table(y), border = NA, axes = FALSE, names.arg = "", col = cols,
         xlim = c(1.5,46.5), ylim = c(0,30))
