@@ -51,5 +51,7 @@ for (i in seq_along(y_steps)) {
        col = cols[i,],
        border = "white")
 }
+abline(v = xlefts, col = "white", lwd = 4)
+abline(h = y_steps, col = "white", lwd = 4)
 par(op)
 dev.off()
