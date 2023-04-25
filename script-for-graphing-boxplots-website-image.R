@@ -7,9 +7,10 @@
 # setting seed for random numbers 
 set.seed(123) 
 
-# generate random dat matrix
+# generate random data matrix
+# (nrow and ncol values chosen somewhat arbitrarily)
 n = 50
-dat = matrix(NA, 15, n) 
+dat = matrix(NA, nrow = 15, ncol = n) 
 for (i in 1:n) { 
   dat[,i] = (3/4) * runif(13, 0.2, 0.5) + runif(15)/8   
 } 
